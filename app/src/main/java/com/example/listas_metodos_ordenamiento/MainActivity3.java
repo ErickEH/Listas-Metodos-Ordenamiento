@@ -19,13 +19,15 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
-
+        //La conexión entre el .java y xml de los botones y TextView
         EditText plain_Valor =findViewById(R.id.plain_Valor);
         TextView textView = findViewById(R.id.textView3);
         TextView outputTextView = findViewById(R.id.outputTextView);
+
+        //Se crea dos String y un intent, con estos tres se guardara lo que se envio de MainActivity
         String condicion1, condicion2;
-        String simple = "Lista simple.";
         Intent condicion = getIntent();
+        //Con el Bundle se obtiene ambos datos y lo almacena.
         Bundle b = condicion.getExtras();
 
             condicion1 = b.getString("ListaCondicion");
@@ -35,6 +37,7 @@ public class MainActivity3 extends AppCompatActivity {
         Button button_A = findViewById(R.id.button_A);
         Button button_I = findViewById(R.id.botton_I);
         Button button_ord = findViewById(R.id.botton_ord);
+        //Con esta funcion permite agregar el dato convirtiendo de EditText a String y por ultimo a int
         button_A.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +47,9 @@ public class MainActivity3 extends AppCompatActivity {
                 actualizarSalida();
             }
         });
+
+        /*Con este boton se compara La condicion1 que es el tipo de lista que el usuario eligio
+        y si lo permite el tipo de lista imprimira los datos al revés*/
         button_I.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +65,8 @@ public class MainActivity3 extends AppCompatActivity {
                 }
             }
         });
+
+        //Con este boton se compara condicion2 con los 2 metodos (burbuja o quicksort)
         button_ord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +80,8 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
     }
+
+    //Con esta función modificia el outputTextView e imprime todos los datos guardados
     private void actualizarSalida() {
         StringBuilder resultado = new StringBuilder();
         Nodo imp = inicio;
@@ -85,6 +95,8 @@ public class MainActivity3 extends AppCompatActivity {
         TextView outputTextView = findViewById(R.id.outputTextView);
         outputTextView.setText(resultado.toString());
     }
+
+    //Cumple la misma función que el anterior con la diferencia de que lo imprime de derecha a izquierda
     private void actualizarSalidaalreves() {
         StringBuilder resultado = new StringBuilder();
         Nodo imp = ultimo;
@@ -98,6 +110,7 @@ public class MainActivity3 extends AppCompatActivity {
         TextView outputTextView = findViewById(R.id.outputTextView);
         outputTextView.setText(resultado.toString());
     }
+    //con este metodo se llama a la clase Nodo y permite la creación y almacenamiento de los datos
     public void agregarNodo(int valor){
         Nodo nuevoNodo = new Nodo(valor);
         if(inicio == null){
@@ -110,6 +123,8 @@ public class MainActivity3 extends AppCompatActivity {
         }
 
     }
+
+    //Permite el ordenamiento de la lista por el metodo burbuja
     public Nodo burbuja(Nodo inicio){
         boolean intercambio;
         do{
@@ -136,6 +151,8 @@ public class MainActivity3 extends AppCompatActivity {
         }while (intercambio);
         return inicio;
     }
+
+    //Permite el ordenamiento de la lista por el metodo quicksort
     public Nodo quicksort(Nodo inicio, Nodo fin) {
         if (inicio == null || inicio == fin) {
             return inicio;
@@ -164,6 +181,8 @@ public class MainActivity3 extends AppCompatActivity {
 
         return nuevoInicio;
     }
+
+    //Sirve como complemento de la funcion quicksort
     public Nodo partir(Nodo inicio, Nodo fin, Nodo nuevoFin, Nodo nuevoInicio) {
         Nodo pivote = fin;
         Nodo previo = null;

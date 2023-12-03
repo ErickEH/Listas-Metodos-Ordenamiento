@@ -14,11 +14,14 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //La conexión entre el .java y xml de los botones y TextView
         setContentView(R.layout.activity_main2);
          button_B = findViewById(R.id.button_B);
          button_Q = findViewById(R.id.button_Q);
         text_metodo = findViewById(R.id.text_metodo);
         textaaa = findViewById(R.id.textView2);
+
+        //Este boton Imprime un mensaje y lo regresa del MainActivity2 al MainActivity
         button_B.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -30,6 +33,7 @@ public class MainActivity2 extends AppCompatActivity {
                 finish();
             }
         });
+        //Este boton Imprime un mensaje y lo regresa del MainActivity2 al MainActivity
         button_Q.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,13 +44,5 @@ public class MainActivity2 extends AppCompatActivity {
                 finish();
             }
         });
-
-
-    }
-    void cambio(TextView text_metodo){
-        Intent intent = new Intent(MainActivity2.this, MainActivity.class);
-        intent.putExtra("result", text_metodo.getText().toString());
-        setResult(RESULT_OK, intent);
-        finish();
     }
 }
