@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Listas-Metodos_Ordenamiento</string>
+    <string name="Boton_S">Lista simple</string>
+    <string name="Boton_D">Lista Doblemente Ligada</string>
+    <string name="Boton_C">Lista Circular</string>
+    <string name="Boton_M">Metodos De Ordenamiento</string>
+    <string name="Boton_B">Metodo Burbuja</string>
+    <string name="Boton_Q">Metodo Quicksort</string>
+    <string name="text_elegir">Usted eligio una: </string>
+    <string name="text_metodo">Y un metodo: </string>
+    <string name="text_vacio"></string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
+    <string name="Boton_X">Agregar Nodos</string>
+    <string name="plain_valor">Ingrese un valor:</string>
+    <string name="boton_A">Agregar</string>
+    <string name="text_izder">Nodos izquierda a derecha: </string>
+    <string name="text_dir">Invertir direccion de nodos</string>
+    <string name="text_ord">Ordenar nodos</string>
+</resources>
