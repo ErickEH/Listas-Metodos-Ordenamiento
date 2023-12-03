@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
+//Hernandez Garcia Erick Emmanuel I3A
 public class MainActivity extends AppCompatActivity {
     Button button_S, button_D, button_C, button_M, button_X;
     private ActivityResultLauncher<Intent> launcher;

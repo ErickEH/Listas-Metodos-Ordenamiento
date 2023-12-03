@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+//Hernandez Garcia Erick Emmanuel I3A
 public class MainActivity2 extends AppCompatActivity {
     Button button_B, button_Q;
     TextView text_metodo, textaaa;

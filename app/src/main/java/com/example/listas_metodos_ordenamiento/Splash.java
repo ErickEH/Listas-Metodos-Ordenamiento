@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+//Hernandez Garcia Erick Emmanuel I3A
 public class Splash extends AppCompatActivity {
 
     @Override
@@ -13,6 +14,7 @@ public class Splash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+        //Splash que dura 5 segundos para cambiar a la MainActivity
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

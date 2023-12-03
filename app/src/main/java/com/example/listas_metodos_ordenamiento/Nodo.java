@@ -1,6 +1,6 @@
 package com.example.listas_metodos_ordenamiento;
 
-import android.widget.TextView;
+//Hernandez Garcia Erick Emmanuel I3A
 
 public class Nodo {
     public int dato;
